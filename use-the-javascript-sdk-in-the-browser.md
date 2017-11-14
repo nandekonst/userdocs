@@ -99,6 +99,32 @@ Each different`Query`type has different support for the query options \(filterin
 Lets select all records of a dataset. If you watch closely, you will notice that the API is chainable.
 
 ```
+<html>
+    <head>
+        <script src="yourpath/dist/js/browser-jexia-sdk.min.js"></script>
+    </head>
+       <body>
+           <a href="#" id="authorize">Authorize</a>
+           <script type="text/javascript">
+                document.getElementById("authorize").onclick = function(){
+                    //Initialize dataOperationsModule
+                    let dom = jexia.dataOperations();
+                    let jexiaClient = jexia.jexiaClient().init({appUrl: "localhost", key: "anna@example.com", secret: "annie123"}, dom).then((initializedClient) => {
+                        dom.dataset("posts").select().execute().then((records) => {
+                                //do something with your data
+                            }
+                            console.log(JSON.stringify(data))
+                        }).catch((error) => {      
+                            console.log(error)
+                        })
+                    })
+                }
+           </script>
+        </body>
+</html>
+```
+
+```
 
 ```
 
