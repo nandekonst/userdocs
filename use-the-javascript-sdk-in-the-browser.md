@@ -231,5 +231,7 @@ let anotherNestedFilter = field("first_name").isEqualTo("Tom")
 [..]
 ```
 
+Filtering operator list and examples
 
+You can find a complete list of the operators supported for filtering in the API reference document.
 
