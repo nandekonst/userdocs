@@ -73,5 +73,7 @@ initializedClientPromise.then( (initializedClient) => {
 
 ## Dataset objects and Query objects
 
+Using an initialized `DataOperationModule` object, you can instantiate `Dataset` objects like so:
+
 
 
