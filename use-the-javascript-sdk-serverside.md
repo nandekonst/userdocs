@@ -16,3 +16,13 @@ Please keep in mind that this quick start guide uses Javascript 2017 syntax.
 
 The examples are made with a simple data schema in mind: think a basic social media platform where`users`can write`posts`and/or`comments`to`posts`. A`post`can be related to any number of`comments`, while each`post`and each`comment`has a`user`as author.
 
+## Importing the SDK into your node project
+
+You can install the SDK through NPM:
+
+`npm install jexia-sdk-js --save`
+
+Now include the SDK in your project:
+
+`var sdk = require('jexia-sdk-js/node');`
+
