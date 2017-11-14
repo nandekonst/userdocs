@@ -293,5 +293,18 @@ sdk.jexiaClient(fetch).init({projectID: "yourProjectID", key: "yourKey", secret:
 [..]
 ```
 
+### Subscribing to events
+
+After a succesful module initialization, the user can start subscribing to events. When a real-time message is pushed from the server, the callback defined while instantiating the real-time module will be called.
+
+```
+[..]
+let posts = dataModule.dataset("posts");
+rtcmod.subscribe("insert", posts);
+[..]
+```
+
+
+
 
 
