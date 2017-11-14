@@ -19,5 +19,13 @@ Please keep in mind that this quick start guide uses Javascript 2017 syntax.
 
 The examples are made with a simple data schema in mind: think a basic social media platform where`users`can write`posts`and/or`comments`to`posts`. A`post`can be related to any number of`comments`, while each`post`and each`comment`has a`user`as author.
 
+## Importing the SDK in your browser application
+
+In order to use the SDK in your browser application the SDK in the `<head>` section of your html page. In order to get access to the methods of the SDK you need to use the namespace `jexia` when calling a method.
+
+```
+<script src="path/to/jexia-sdk-js/dist/browser-jexia-sdk.min.js></script>
+```
+
 
 
