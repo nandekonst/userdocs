@@ -283,5 +283,7 @@ posts.delete().filter(field("title").isEqualTo("test")).execute().then( (records
 [..]
 ```
 
+## Real-time communication
 
+The real-time functionality is added through a separate module. The module needs to be imported, instantiated and initialized along with the client.
 
