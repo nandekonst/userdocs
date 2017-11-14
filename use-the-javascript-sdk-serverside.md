@@ -131,3 +131,9 @@ sdk.jexiaClient(fetch).init({appUrl: "your Jexia App URL", key: "username", secr
 
 But at the very least, defining dataset variables could come in handy when executing multiple different queries on the same dataset.
 
+### Sorting records
+
+
+
+
+
