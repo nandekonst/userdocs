@@ -204,3 +204,11 @@ let combinedCriteria = simpleCriterion.or(field("username").isEqualTo("Dick"));
 
 In order to use these conditions, they need to be added to a query using the`.filter`method
 
+```
+[..]
+posts.select().filter(field("username").isEqualTo("Harry"));
+[..]
+```
+
+
+
