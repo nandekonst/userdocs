@@ -133,7 +133,7 @@ But at the very least, defining dataset variables could come in handy when execu
 
 ### Sorting records
 
-
+To activate sorting, you need to call`.sortAsc`or`.sortDesc`on a`Query`object and pass as string the name of the field you want to sort by.
 
 
 
