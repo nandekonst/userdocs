@@ -241,7 +241,16 @@ Relations can be added to a query in order to have the query apply not only to t
 
 Retrieving relations:
 
-
+```
+[..]
+let posts = dataModule.dataset("posts");
+let comments = dataModule.dataset("comments");
+posts.select().relation(comments).execute().then( (records) => {
+    //objects in the records array will now contain a property called "comments"
+    //which will be an array holding the comments related to a particular post
+});
+[..]
+```
 
 
 
