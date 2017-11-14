@@ -71,7 +71,7 @@ initializedClientPromise.then( (initializedClient) => {
 });
 ```
 
-
+## Dataset objects and Query objects
 
 
 
