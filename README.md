@@ -1,2 +1,4 @@
-# userdocs
-Jexia Docs
+# User Documentation
+
+Jexia Documentation
+
