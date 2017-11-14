@@ -96,6 +96,8 @@ Each different`Query`type has different support for the query options \(filterin
 
 ### Selecting all records from a dataset
 
+Lets select all records of a dataset. If you watch closely, you will notice that the API is chainable.
+
 ```
 
 ```
