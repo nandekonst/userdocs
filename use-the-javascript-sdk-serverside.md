@@ -167,5 +167,11 @@ posts.select().fields("id", "title").execute().then( (records) => {
 [..]
 ```
 
+### Filtering records
+
+You can use the filtering feature to select what records a certain query will operate on.
+
+In order to define a filter, you need to use the appropriate filtering objects. They can be created using the exposed methods`field`and`combineCriteria`.`combineCriteria`is something very specific that provides another way to create nested logical conditions. You're probably not going to use that much, but it's useful to know that it exists.
+
 
 
