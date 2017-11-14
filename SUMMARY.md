@@ -3,9 +3,9 @@
 * [Introduction](README.md)
 * [What is Jexia](what-is-jexia.md)
 * [Get started](get-started.md)
-* Use the Javascript SDK serverside
+* [Use the Javascript SDK serverside](use-the-javascript-sdk-serverside.md)
 * Use the Javascript SDK in the browser
 * REST API Documentation
-* SDK Dev Guide
+* [SDK Dev Guide](sdk-dev-guide.md)
 * SDK API Reference
 
