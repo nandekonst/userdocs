@@ -43,5 +43,33 @@ initializedClientPromise.then( (initializedClient) => {
 });
 ```
 
+## The Module system
+
+The Jexia SDK is built as a set of modules \(or plugins\) structured around a core entity \(the`Client`class used above\). In order to use a module you need to:
+
+* initialize it
+* pass it to the
+  `Client`
+  when calling the
+  `.init()`
+  method
+
+Probably the most useful module is the Data Operation Module \(`DataOperationsModule`class\). The example below will show how to initialize the SDK using this module. Follow the`dataModule`variable to see how this mechanism works.
+
+```
+sdk = require('jexia-sdk-js/node');
+fetch = require("node-fetch");
+
+let dataModule = sdk.dataOperations();
+
+let initializedClientPromise = sdk.jexiaClient(fetch).init({appUrl: "your Jexia App URL", key: "username", secret: "password"}, dataModule);
+initializedClientPromise.then( (initializedClient) => {
+  // you have been succesfully logged in!
+  // you can start using the dataModule variable to operate on records here
+}).catch( (error) => {
+  // uh-oh, there was a problem logging in, check the error.message for more info
+});
+```
+
 
 
