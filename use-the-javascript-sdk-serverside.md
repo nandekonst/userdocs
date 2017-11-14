@@ -117,3 +117,17 @@ sdk.jexiaClient(fetch).init({appUrl: "your Jexia App URL", key: "username", secr
 
 If you watch closely, you will see that the API is chainable, so you can write it in a much less verbose way:
 
+```
+[..]
+sdk.jexiaClient(fetch).init({appUrl: "your Jexia App URL", key: "username", secret: "password"}, dataModule).then( (initializedClient) => {
+  dataModule.dataset("posts").select().execute().then( (records) => {
+    // you can start iterating through the posts here
+  }).catch( (error) => {
+    // there was a problem retrieving the records
+  });
+});
+[..]
+```
+
+
+
