@@ -155,5 +155,9 @@ posts.select().limit(2).offset(5).execute().then( (records) => {
 [..]
 ```
 
+### Only retrieving certain fields
+
+You can use the`.fields`method to define what fields you want to retrieve:
+
 
 
