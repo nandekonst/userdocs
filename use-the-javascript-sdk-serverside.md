@@ -261,5 +261,37 @@ posts.delete().filter(field("title").isEqualTo("test")).execute().then( (records
 
 The real-time functionality is added through a seperate module. The module needs to be imported, instantiated and initialized along with the client.
 
+### Importing
+
+```
+let sdk = require('jexia-sdk-js/node');
+```
+
+The real-time module needs a websocket client in order to function. For Node.JS apps, a websocket client needs to be imported and a callback instantiating the websocket client must be passed to the real-time module, as in this example.
+
+```
+Websocket = require("WebSocket from "your favorite Node.JS WebSocket implementation")
+
+let rtc = sdk.realTime(
+  (message) => { // do stuff with your real time notification here },
+  (appUrl) => new WebSocket(appUrl)
+);
+```
+
+### Initializing
+
+The real-time module needs to be passed to the`Client`when initializing the latter. The`Client`accepts a spread parameter to define the modules that need to be initialized.
+
+```
+[..]
+sdk.jexiaClient(fetch).init({projectID: "yourProjectID", key: "yourKey", secret: "yourKey"}, rtc).then( (initializedClient) => {
+  // you have been succesfully logged in
+  // you can start using the initialized rtcmod here
+}).catch( (error) => {
+  // there was a problem logging in or initializing the real-time module
+});
+[..]
+```
+
 
 
