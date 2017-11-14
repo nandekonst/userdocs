@@ -167,7 +167,9 @@ posts.select().sortAsc("id").execute().then( (records) => {
 [..]
 ```
 
+### Limit and offset
 
+You can use`.limit`and`.offset`on a`Query`object for these options. They can be used separately or together. Only setting the limit \(to a value X\) will make the query operate on the first X records. Only setting the offset will make the query operate on the last Y records, starting from the offset value.
 
 
 
