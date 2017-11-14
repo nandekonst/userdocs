@@ -147,5 +147,13 @@ posts.select().sortAsc("id").execute().then( (records) => {
 
 You can use`.limit`and`.offset`on a`Query`object for these options. They can be used separately or together. Only setting the limit \(to a value X\) will make the query operate on the first X records. Only setting the offset will make the query operate on the last Y records, starting from the offset value.
 
+```
+[..]
+posts.select().limit(2).offset(5).execute().then( (records) => {
+  // records will be an array of 2 records, starting from position 5 in the Dataset
+});
+[..]
+```
+
 
 
