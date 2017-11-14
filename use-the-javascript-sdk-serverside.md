@@ -75,5 +75,11 @@ initializedClientPromise.then( (initializedClient) => {
 
 Using an initialized `DataOperationModule` object, you can instantiate `Dataset` objects like so:
 
+```
+[..]
+let posts = dataModule.dataset("posts");
+[..]
+```
+
 
 
