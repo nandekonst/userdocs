@@ -27,5 +27,9 @@ In order to use the SDK in your browser application the SDK in the `<head>` sect
 <script src="path/to/jexia-sdk-js/dist/browser-jexia-sdk.min.js></script>
 ```
 
+## Initialization and Authentication
+
+The`jexiaClient()`function will return an instance of the`Client`class. The browser SDK will use the native`fetch`implementation.
+
 
 
