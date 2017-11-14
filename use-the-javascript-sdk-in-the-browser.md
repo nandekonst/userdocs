@@ -336,5 +336,15 @@ rtc.subscribe('post', posts);
 
 The`Client`class exposes a method called`.terminate()`which returns a`Promise`with the terminated`Client`instance. Use this to clear up resources used by the`Client`class and any modules you initialized along with it \(you don't have to pass the modules along, the`Client`will terminate any modules you supplied on initialization.\)
 
+```
+[..]
+jexia.jexiaClient().terminate().then( (terminatedClient) => {
+  // everything has been cleared
+}).catch( (err)=>{
+  // something went wrong when cleaning up
+});
+[..]
+```
+
 
 
