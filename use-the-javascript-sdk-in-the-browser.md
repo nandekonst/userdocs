@@ -323,5 +323,14 @@ The real-time module needs to be passed to the`Client`when initializing the latt
 
 After a succesful module initialization, the user can start subscribing to events. When a real-time message is pushed from the server, the callback defined when instantiating the real-time module will be called.
 
+```
+[..]
+
+const posts = doops.dataset("posts");
+rtc.subscribe('post', posts);
+
+[..]
+```
+
 
 
