@@ -287,3 +287,11 @@ posts.delete().filter(field("title").isEqualTo("test")).execute().then( (records
 
 The real-time functionality is added through a separate module. The module needs to be imported, instantiated and initialized along with the client.
 
+### Importing 
+
+```
+<script src="path/to/jexia-sdk-js/dist/browser-jexia-sdk.min.js></script>
+```
+
+
+
