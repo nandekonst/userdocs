@@ -210,5 +210,7 @@ posts.select().filter(field("username").isEqualTo("Harry"));
 [..]
 ```
 
+Multiple`.filter`calls can be chained, but only the last call will be taken into account. If a complex condition needs to be set for filtering, it has to be created in one go \(in-line or not\) and passed as an argument to the`.filter`method.
 
+Filtering conditions can be nested at any level.
 
