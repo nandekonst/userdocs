@@ -90,5 +90,5 @@ let deleteQuery = posts.delete();
 [..]
 ```
 
-Any Query can be executed by calling .execute\(\) on it. This results in a Promise resolving to a set of records, regardless of the type of query executed.  For select queries, the records returned are the records that the user wants to retrieve. For the other queries, the records returned are the actual records that have been operated on \(modified, added or deleted\).
+Any Query can be executed by calling `.execute() `on it. This results in a `Promise` resolving to a set of records, regardless of the type of query executed.  For select queries, the records returned are the records that the user wants to retrieve. For the other queries, the records returned are the actual records that have been operated on \(modified, added or deleted\).
 
