@@ -94,9 +94,7 @@ Any Query can be executed by calling `.execute()`on it. This results in a `Promi
 
 Each different`Query`type has different support for the query options \(filtering, sorting, etc.\). E.g. you cannot apply filtering to insert queries, as the method isn't defined on the`InsertQuery`object.
 
-### 
-
-
+### Selecting all records from a dataset
 
 ```
 
