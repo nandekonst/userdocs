@@ -173,5 +173,20 @@ You can use the filtering feature to select what records a certain query will op
 
 In order to define a filter, you need to use the appropriate filtering objects. They can be created using the exposed methods`field`and`combineCriteria`.`combineCriteria`is something very specific that provides another way to create nested logical conditions. You're probably not going to use that much, but it's useful to know that it exists.
 
+```
+let simpleCriterion = field("username").isEqualTo("Tom");
+let combinedCriteria = simpleCriterion.or(field("username").isEqualTo("Dick"));
+```
 
+In order to use these conditions, they need to be added to a query using the`.filter`method
+
+```
+[..]
+posts.select().filter(field("username").isEqualTo("Harry"));
+[..]
+```
+
+Multiple`.filter`calls can be chained, but only the last call will be taken into account. If a complex condition needs to be set for filtering, it has to be created in one go \(in-line or not\) and passed as an argument to the`.filter`method.
+
+Filtering conditions can be nested at any level.
 
