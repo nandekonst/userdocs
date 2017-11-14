@@ -26,3 +26,22 @@ Now include the SDK in your project:
 
 `var sdk = require('jexia-sdk-js/node');`
 
+## Initialization and Authentication
+
+The`jexiaClient()`function will return an instance of the`Client`class. On Node.JS, you will need to provide a`fetch`standard compliant function as a parameter. You will need to add a compatible dependency to your project. For development of the SDK we've used`node-fetch`
+
+```
+sdk = require('jexia-sdk-js/node');
+fetch = require("node-fetch");
+
+let initializedClientPromise = sdk.jexiaClient(fetch).init({appUrl: "your Jexia App URL", key: "username", secret: "password"});
+initializedClientPromise.then( (initializedClient) => {
+  // you have been succesfully logged in!
+  // you can start using the initializedClient variable here
+}).catch( (error) => {
+  // uh-oh, there was a problem logging in, check the error.message for more info
+});
+```
+
+
+
