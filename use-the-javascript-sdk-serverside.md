@@ -81,5 +81,18 @@ let posts = dataModule.dataset("posts");
 [..]
 ```
 
-Using a `Dataset` object, you can instantiate a `Query` object, depending on the type of query you want to execute
+Using a `Dataset` object, you can instantiate a `Query` object, depending on the type of query you want to execute.
+
+```
+[..]
+let selectQuery = postsDataset.select();
+let insertQuery = postsDataset.insert( [ post1, post2 ] );
+let updateQuery = postsDataset.update( [ title: "Updated title" ] );
+let deleteQuery = postsDataset.delete();
+[..]
+```
+
+Any`Query`can be executed by calling`.execute()`on it. This results in a`Promise`resolving to a set of records, regardless of the type of`Query`executed. For select queries, the records returned are the records that the user wants to retrieve. For the other queries, the records returned are the actual records that have been operated on \(modified, added or deleted\).
+
+Each different`Query`type has different support for the query options \(filtering, sorting, etc.\). E.g. you cannot apply filtering to insert queries, as the method isn't defined on the`InsertQuery`object.
 
