@@ -320,7 +320,7 @@ client.terminate().then( (terminatedClient) => {
 
 ### Full example
 
-Here is a full  example for retrieving records in Nodejs which shows the data in the console:
+Here is a full example for retrieving records in Nodejs which shows the data in the console:
 
 ```
 let sdk = require('jexia-sdk-js/node');
@@ -351,10 +351,39 @@ function selectPosts(jexiaClient){
 selectPosts(client);
 ```
 
-
+Here is a full example for using the RTC functionality:
 
 ```
+let sdk = require('jexia-sdk-js/node');
+let fetch = require('node-fetch');
+let ws = require('ws');
 
+let dataModule = sdk.dataOperations();
+let rtc = sdk.realTime((message) => {
+console.log(message);
+}, (url) => {
+return new ws(url);
+});
+
+sdk.jexiaClient(fetch)
+    .init({projectID: "yourProjectID", key: "yourKey", secret: "yourKey"}, dataModule, rtc).then( () => {
+        rtc
+        .subscribe('SELECT', dataModule.dataset('posts'))
+        .then(() => {
+            dataModule
+            .dataset("posts")
+            .select()
+            .execute()
+                .then((records) => {
+                    console.log(records);
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+        });
+    }).catch( (error) => {      
+        console.log(error);
+    });
 ```
 
 
