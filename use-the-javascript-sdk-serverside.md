@@ -304,6 +304,53 @@ rtcmod.subscribe("insert", posts);
 [..]
 ```
 
+### Logging off and cleanup
+
+The`Client`class exposes a method called`.terminate()`which returns a`Promise`with the terminated`Client`instance. Use this to clear up resources used by the`Client`class and any modules you initialized along with it \(you don't have to pass the modules along, the`Client`will terminate any modules you supplied on initialization.\)
+
+```
+[..]
+client.terminate().then( (terminatedClient) => {
+  // everything has been cleared
+}).catch( (err)=>{
+  // something went wrong when cleaning up
+});
+[..]
+```
+
+### Full example
+
+Here is a full  example for retrieving records in Nodejs which shows the data in the console:
+
+```
+let sdk = require('jexia-sdk-js/node');
+let fetch = require('node-fetch');
+
+//Initialize DataOperationsModule
+let dataModule = sdk.dataOperations();
+
+//Initialize Client and pass DataOperationsModule to it.
+let client = sdk.jexiaClient(fetch).init({projectID: "yourProjectID", key: "yourKey", secret: "yourKey"}, dataModule);
+
+//select Posts
+function selectPosts(jexiaClient){
+    jexiaClient.then( (initializedClient) => {
+        let postDataset = dataModule.dataset("posts");
+        postDataset.select().execute().then( (records) => {
+            console.log(records);
+            process.exit();
+        }).catch( (error) => {
+            // there was a problem retrieving the records
+            console.log(error);
+            process.exit();
+        });
+    });
+}
+
+//Call the function
+selectPosts(client);
+```
+
 
 
 
