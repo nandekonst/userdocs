@@ -252,5 +252,21 @@ posts.select().relation(comments).execute().then( (records) => {
 [..]
 ```
 
+### Inserting records
+
+```
+[..]
+let posts = dataModule.dataset("posts");
+posts.insert([ {title: "New Post", content:"content here"}, 
+               {title: "Another Post", content:"some more content"} 
+]).execute().then( (records) => {
+  // you will be able to access the newly inserted records here
+  // complete with their generated IDs
+}).catch( (error) => {
+  // you can see the error info here, if something goes wrong
+});
+[..]
+```
+
 
 
