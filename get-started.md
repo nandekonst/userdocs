@@ -37,5 +37,11 @@ Executing an operation on a set of records is done through a Query. Depending on
 
 All these features are handled server-side.
 
+## Real-time communcation
+
+The user can subscribe to events and will be notified in real time when those events are fired off on the server. Right now the events are only related to actions made on data. Subscription works on a per-dataset \(and schema\), per-action level.
+
+**For example: adding records to the Posts dataset, or deleting records in the Users dataset.**
+
 
 
