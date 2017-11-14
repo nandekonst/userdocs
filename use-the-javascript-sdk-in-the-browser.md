@@ -31,5 +31,16 @@ In order to use the SDK in your browser application the SDK in the `<head>` sect
 
 The`jexiaClient()`function will return an instance of the`Client`class. The browser SDK will use the native`fetch`implementation.
 
+## The Module System
+
+The Jexia SDK is built as a set of modules \(or plugins\) structured around a core entity, \(the `Client` class used above\). In order to use a module, you need to :
+
+* initialize it
+* pass it to the `Client` when calling the` .init() `method
+
+Probably the most useful module is the Data Operation Module \(`DataOperationsModule`class\). The example below will show how to initialize the SDK using this module. Follow the`dataModule`variable to see how this mechanism works.
+
+
+
 
 
