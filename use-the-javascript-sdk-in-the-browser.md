@@ -124,5 +124,36 @@ Lets select all records of a dataset. If you watch closely, you will notice that
 </html>
 ```
 
+We can also use temporary variables to point out the different objects and functionality involved when working with records. At the very least, defining dataset variables could come in handy when executing multiple different queries on the same dataset.
+
+```
+<html>
+    <head>
+        <script src="yourpath/dist/js/browser-jexia-sdk.min.js"></script>
+    </head>
+       <body>
+           <a href="#" id="authorize">Authorize</a>
+           <script type="text/javascript">
+                document.getElementById("authorize").onclick = function(){
+                    //Initialize dataOperationsModule
+                    let dom = jexia.dataOperations();
+                    let jexiaClient = jexia.jexiaClient().init({appUrl: "localhost", key: "anna@example.com", secret: "annie123"}, dom).then((initializedClient) => {
+                        let posts = dom.dataset("posts")
+                        let unexecutedQuery = dom.select();
+                        let executedQueryPromise = unexecutedQuery.execute();
+                           executedQueryPromise.then((records) => {
+                                //do something with your data
+                            }
+                            console.log(JSON.stringify(data))
+                        }).catch((error) => {      
+                            console.log(error)
+                        })
+                    })
+                }
+           </script>
+        </body>
+</html>
+```
+
 
 
