@@ -79,7 +79,5 @@ let posts = dom.dataset("posts");
 [..]
 ```
 
-
-
-
+Using a `Dataset` object, you can instantiate a `Query` object depending on the type of query you want to execute
 
