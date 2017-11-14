@@ -297,5 +297,27 @@ The real-time functionality is added through a separate module. The module needs
 
 The real-time module needs to be passed to the`Client`when initializing the latter. The`Client`accepts a spread parameter to define the modules that need to be initialized.
 
+```
+    .init({appUrl: 'localhost', key: 'anna@example.com', secret: 'annie123'}, rtc, doops)
+    .then((cli) => {
+      console.log(cli);
+      const posts = doops.dataset("posts");
+      rtc.subscribe('post', posts);
+      setTimeout(() => {
+        posts.insert([{
+          category_id: 1,
+          post: "Example 2",
+          posted: true,
+          title: "Other post 3",
+          user_id: 1
+        }]).execute().then( (records) => {
+          console.log(records);
+        }).catch( (error) => {
+          console.log(error);
+        });
+      }, 1000);
+    });
+```
+
 
 
