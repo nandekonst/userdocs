@@ -215,5 +215,51 @@ Relations can be added to a query in order to have the query apply not only to t
 
 Retrieving relations:
 
+```
+[..]
+let posts = dataModule.dataset("posts");
+let comments = dataModule.dataset("comments");
+posts.select().relation(comments).execute().then( (records) => {
+  // objects in the records array will now contain a property called "comments"
+  // which will be an array holding the comments related to a particular post.
+});
+[..]
+```
+
+### Inserting records
+
+```
+[..]
+let posts = dataModule.dataset("posts");
+posts.insert([ {title: "New Post", content:"content here"}, 
+               {title: "Another Post", content:"some more content"} 
+]).execute().then( (records) => {
+  // you will be able to access the newly inserted records here
+  // complete with their generated IDs
+}).catch( (error) => {
+  // you can see the error info here, if something goes wrong
+});
+[..]
+```
+
+### Deleting records
+
+```
+[..]
+let posts = dataModule.dataset("posts");
+posts.delete().filter(field("title").isEqualTo("test")).execute().then( (records) => {
+  // you will be able to access the deleted records here
+  // they won't be stored in the DB anymore, but maybe you
+  // want to display a visual confirmation of what got deleted
+}).catch( (error) => {
+  // you can see the error info here, if something goes wrong
+});
+[..]
+```
+
+## Realtime Communication
+
+The real-time functionality is added through a seperate module. The module needs to be imported, instantiated and initialized along with the client.
+
 
 
