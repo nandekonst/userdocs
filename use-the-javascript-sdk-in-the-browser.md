@@ -235,3 +235,11 @@ Filtering operator list and examples
 
 You can find a complete list of the operators supported for filtering in the API reference document.
 
+### Defining relations
+
+Relations can be added to a query in order to have the query apply not only to the main dataset the query is created from, but also to related records from other datasets.
+
+Retrieving relations:
+
+
+
