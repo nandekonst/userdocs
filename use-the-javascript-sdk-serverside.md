@@ -115,5 +115,5 @@ sdk.jexiaClient(fetch).init({appUrl: "your Jexia App URL", key: "username", secr
 [..]
 ```
 
-
+If you watch closely, you will see that the API is chainable, so you can write it in a much less verbose way:
 
