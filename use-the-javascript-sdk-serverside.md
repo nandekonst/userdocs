@@ -190,3 +190,30 @@ Multiple`.filter`calls can be chained, but only the last call will be taken into
 
 Filtering conditions can be nested at any level.
 
+```
+[..]
+let flatFilter = field("first_name").isEqualTo("Tom")
+                 .or( field("first_name").isEqualTo("Dick"))
+                 .or( field("first_name").isEqualTo("Harry"));
+
+let nestedFilter = field("first_name").isEqualTo("Tom")
+                   .or( field("first_name").isEqualTo("Dick")
+                        .and( field("middle_name").isEqualTo("Harry")));
+
+let anotherNestedFilter = field("first_name").isEqualTo("Tom")
+                   .or( field("first_name").isEqualTo("Dick")
+                        .and( field("middle_name").isEqualTo("Harry")
+                              .or( field("middle_name").isEqualTo("Larry"))));
+[..]
+```
+
+You can find a complete list of the operators supported for filtering in the SDK API Reference.
+
+### Defining relations
+
+Relations can be added to a query in order to have the query apply not only to the main dataset the query is created from, but also to related records from other datasets.
+
+Retrieving relations:
+
+
+
