@@ -268,5 +268,20 @@ posts.insert([ {title: "New Post", content:"content here"},
 [..]
 ```
 
+### Deleting records
+
+```
+[..]
+let posts = dataModule.dataset("posts");
+posts.delete().filter(field("title").isEqualTo("test")).execute().then( (records) => {
+  // you will be able to access the deleted records here
+  // they won't be stored in the DB anymore, but maybe you
+  // want to display a visual confirmation of what got deleted
+}).catch( (error) => {
+  // you can see the error info here, if something goes wrong
+});
+[..]
+```
+
 
 
