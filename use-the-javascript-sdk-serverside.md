@@ -10,5 +10,9 @@ The SDK currently exposes the following features:
 
 The SDK is currently focused on consuming data. Managing the data schema \(creating Datasets, adding columns to Datasets, etc.\) is out of scope for now.
 
+## Code samples {#code-samples}
 
+Please keep in mind that this quick start guide uses Javascript 2017 syntax.
+
+The examples are made with a simple data schema in mind: think a basic social media platform where`users`can write`posts`and/or`comments`to`posts`. A`post`can be related to any number of`comments`, while each`post`and each`comment`has a`user`as author.
 
