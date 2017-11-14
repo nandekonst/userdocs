@@ -181,9 +181,15 @@ posts.select().limit(2).offset(5).execute().then( (records) => {
 
 ### Only retrieving certain fields
 
-You can use the `.fields `method to define what fields you want to retrieve
+You can use the `.fields`method to define what fields you want to retrieve.
 
-
+```
+[..]
+posts.select().fields("id", "title").execute().then( (records) => {
+  // the individual record objects will only have the two properties defined above
+});
+[..]
+```
 
 
 
