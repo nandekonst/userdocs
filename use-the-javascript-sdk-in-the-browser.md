@@ -79,5 +79,16 @@ let posts = dom.dataset("posts");
 [..]
 ```
 
-Using a `Dataset` object, you can instantiate a `Query` object depending on the type of query you want to execute
+Using a `Dataset` object, you can instantiate a `Query` object depending on the type of query you want to execute.
+
+```
+[..]
+let selectQuery = posts.select();
+let insertQuery = posts.insert( [ post1, post2 ] );
+let updateQuery = posts.update( [ title: "Updated title" ] );
+let deleteQuery = posts.delete();
+[..]
+```
+
+
 
