@@ -332,5 +332,9 @@ rtc.subscribe('post', posts);
 [..]
 ```
 
+### Logging of and cleaning up
+
+The`Client`class exposes a method called`.terminate()`which returns a`Promise`with the terminated`Client`instance. Use this to clear up resources used by the`Client`class and any modules you initialized along with it \(you don't have to pass the modules along, the`Client`will terminate any modules you supplied on initialization.\)
+
 
 
