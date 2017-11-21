@@ -31,8 +31,8 @@ Now include the SDK in your project:
 The`jexiaClient()`function will return an instance of the`Client`class. On Node.JS, you will need to provide a`fetch`standard compliant function as a parameter. You will need to add a compatible dependency to your project. For development of the SDK we've used`node-fetch`
 
 ```
-sdk = require('jexia-sdk-js/node');
-fetch = require("node-fetch");
+const sdk = require('jexia-sdk-js/node');
+const fetch = require("node-fetch");
 
 let initializedClientPromise = sdk.jexiaClient(fetch).init({appUrl: "your Jexia App URL", key: "username", secret: "password"});
 initializedClientPromise.then( (initializedClient) => {
@@ -57,8 +57,8 @@ The Jexia SDK is built as a set of modules \(or plugins\) structured around a co
 Probably the most useful module is the Data Operation Module \(`DataOperationsModule`class\). The example below will show how to initialize the SDK using this module. Follow the`dataModule`variable to see how this mechanism works.
 
 ```
-sdk = require('jexia-sdk-js/node');
-fetch = require("node-fetch");
+const sdk = require('jexia-sdk-js/node');
+const fetch = require("node-fetch");
 
 let dataModule = sdk.dataOperations();
 
@@ -264,7 +264,7 @@ The real-time functionality is added through a seperate module. The module needs
 ### Importing
 
 ```
-let sdk = require('jexia-sdk-js/node');
+const sdk = require('jexia-sdk-js/node');
 ```
 
 The real-time module needs a websocket client in order to function. For Node.JS apps, a websocket client needs to be imported and a callback instantiating the websocket client must be passed to the real-time module, as in this example.
@@ -323,8 +323,8 @@ client.terminate().then( (terminatedClient) => {
 Here is a full example for retrieving records in Nodejs which shows the data in the console:
 
 ```
-let sdk = require('jexia-sdk-js/node');
-let fetch = require('node-fetch');
+const sdk = require('jexia-sdk-js/node');
+const fetch = require('node-fetch');
 
 //Initialize DataOperationsModule
 let dataModule = sdk.dataOperations();
@@ -354,9 +354,9 @@ selectPosts(client);
 Here is a full example for using the RTC functionality:
 
 ```
-let sdk = require('jexia-sdk-js/node');
-let fetch = require('node-fetch');
-let ws = require('ws');
+const sdk = require('jexia-sdk-js/node');
+const fetch = require('node-fetch');
+const ws = require('ws');
 
 let dataModule = sdk.dataOperations();
 let rtc = sdk.realTime((message) => {
