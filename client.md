@@ -33,7 +33,7 @@
 
 ### Properties {#inputs}
 
-| **PublictokenManager** |
+| **Public tokenManager** |
 | :--- |
 | `tokenManager:TokenManager` |
 | Type :`TokenManager` |
