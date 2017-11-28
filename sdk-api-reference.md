@@ -1,6 +1,6 @@
 # Classes
 
-## Client:
+## [Client](#client):
 
 ### File
 
@@ -38,10 +38,6 @@
 | :--- |
 | `tokenManager:TokenManager` |
 | Type :`TokenManager` |
-
-
-
-
 
 
 
