@@ -1,54 +1,74 @@
-Client
 
-File
+## Client
 
-src/api/core/client.ts
+### File
 
-Index {#index}
+`src/api/core/client.ts`
 
-Properties
-Public tokenManager
-Methods
-Public init Public terminate
-Constructor {#constructor}
+### Index {#index}
 
-constructor(fetch:Function)
-**Parameters :**NameTypeOptionalDescriptionfetchFunction
-Methods {#methods}
+| **Properties** |
+| :--- |
+| Public [tokenManager](#tokenManager) |
+| **Methods** |
+| Public [init](#init) Public [terminate](#terminate) |
 
-Publicinit
-init(opts: IAuthOptions, ...modules: IModule[])
-**Parameters :**NameTypeOptionalDescriptionoptsIAuthOptionsmodulesIModule[]Returns :Promise<>
-Publicterminate
-terminate()
-Returns :Promise<>
-Properties {#inputs}
+### Constructor {#constructor}
 
-PublictokenManager
-tokenManager:TokenManager
-Type :TokenManager
-DataOperationsModule:
+| `constructor(fetch:`[`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)`)` |
+| :--- |
+| **Parameters :**NameTypeOptionalDescriptionfetch[`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) |
 
-File
+### Methods {#methods}
 
-src/api/dataops/dataOperationsModule.ts
+| **Publicinit** |
+| :--- |
+| `init(opts: IAuthOptions, ...modules: IModule[])` |
+| **Parameters :**NameTypeOptionalDescriptionopts`IAuthOptions`modules`IModule[]`**Returns :**`Promise<>` |
 
-Implements
+| **Publicterminate** |
+| :--- |
+| `terminate()` |
+| **Returns :**`Promise<>` |
 
-IModule
+### Properties {#inputs}
 
-Index {#index}
+| **PublictokenManager** |
+| :--- |
+| `tokenManager:TokenManager` |
+| Type :`TokenManager` |
 
-Methods
-Public dataset Public init Public terminate
-Methods {#methods}
+## DataOperationsModule:
 
-Publicdataset
-dataset(dataset:string)
-**Parameters : **NameTypeOptionalDescriptiondatasetstringReturns :Dataset
-Publicinit
-init(projectID:string, tokenManager: TokenManager, requestAdapter: IRequestAdapter)
-**Parameters : **NameTypeOptionalDescriptionprojectIDstringtokenManagerTokenManagerrequestAdapterIRequestAdapterReturns :Promise<>
-Publicterminate
-terminate()
-Returns :Promise<any>
+### File
+
+`src/api/dataops/dataOperationsModule.ts`
+
+### Implements
+
+`IModule`
+
+### Index {#index}
+
+| **Methods** |
+| :--- |
+| Public [dataset](#dataset) Public [init](#init) Public [terminate](#terminate) |
+
+### Methods {#methods}
+
+| **Publicdataset** |
+| :--- |
+| `dataset(dataset:`[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string)`)` |
+| **Parameters : **NameTypeOptionalDescriptiondataset[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string)**Returns :**[`Dataset`](../classes/Dataset.html) |
+
+| **Publicinit** |
+| :--- |
+| `init(projectID:`[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string)`, tokenManager: TokenManager, requestAdapter: IRequestAdapter)` |
+| **Parameters : **NameTypeOptionalDescriptionprojectID[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string)tokenManager`TokenManager`requestAdapter`IRequestAdapter`**Returns :**`Promise<>` |
+
+| **Publicterminate** |
+| :--- |
+| `terminate()` |
+| **Returns :**`Promise<any>` |
+
+## 
