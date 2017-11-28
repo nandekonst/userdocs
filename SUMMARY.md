@@ -7,5 +7,5 @@
 * [Use the Javascript SDK in the browser](use-the-javascript-sdk-in-the-browser.md)
 * [REST API Documentation](rest-api-documentation.md)
 * [SDK Dev Guide](sdk-dev-guide.md)
-* SDK API Reference
+* [SDK API Reference](sdk-api-reference.md)
 
