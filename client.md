@@ -9,7 +9,7 @@
 
 | **Properties** |
 | :--- |
-| Public [tokenManager](#tokenManager) |
+| Public [tokenManager](#inputs) |
 | **Methods** |
 | Public [init](#init) Public [terminate](#terminate) |
 
@@ -33,7 +33,7 @@
 
 ### Properties {#inputs}
 
-| Public #tokenManager |
+| Public tokenManager |
 | :--- |
 | `tokenManager:TokenManager` |
 | Type :`TokenManager` |
