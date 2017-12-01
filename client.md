@@ -11,7 +11,7 @@
 | :--- |
 | Public [tokenManager](#properties-inputs) |
 | **Methods** |
-| Public [init](#init) Public [terminate](#terminate) |
+| Public [init](#methods-methods) Public [terminate](#methods-methods) |
 
 ### Constructor {#constructor}
 
