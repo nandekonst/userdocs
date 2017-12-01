@@ -7,11 +7,11 @@ Listed below, you will find in short what you can do with Jexia:
 * Create a project
 * Create datasets
 * Add fields to your datasets
+* Generate REST API's
 * Perform CRUD operations on your datasets
 * Make relations between datasets
 * Use real-time communication
 * Use Authentication mechanism
 * [Use the Javascript SDK browser-side](use-the-javascript-sdk-in-the-browser.md)
-* Use the Javascript SDK server-side
+* [Use the Javascript SDK server-side](use-the-javascript-sdk-serverside.md)
 
-[Get Started](get-started.md)
