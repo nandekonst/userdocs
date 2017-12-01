@@ -21,12 +21,12 @@
 
 ### Methods {#methods}
 
-| **Publicinit** |
+| **Public init** |
 | :--- |
 | `init(opts: IAuthOptions, ...modules: IModule[])` |
 | **Parameters :**NameTypeOptionalDescriptionopts`IAuthOptions`modules`IModule[]`**Returns :**`Promise<>` |
 
-| **Publicterminate** |
+| **Public terminate** |
 | :--- |
 | `terminate()` |
 | **Returns :**`Promise<>` |
