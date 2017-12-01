@@ -11,7 +11,7 @@ Listed below, you will find in short what you can do with Jexia:
 * Make relations between datasets
 * Use real-time communication
 * Use Authentication mechanism
-* Use the Javascript SDK browser-side
+* [Use the Javascript SDK browser-side](use-the-javascript-sdk-in-the-browser.md)
 * Use the Javascript SDK server-side
 
 [Get Started](get-started.md)
