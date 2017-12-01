@@ -10,6 +10,7 @@ Listed below, you will find in short what you can do with Jexia:
 * Perform CRUD operations on your datasets
 * Make relations between datasets
 * Use Authentication mechanism
-* Use SDK to authenticate and communicate with your datasets
+* Use the Javascript SDK browser-side
+* Use the Javascript SDK server-side
 
 [Get Started](get-started.md)
