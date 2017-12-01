@@ -4,12 +4,12 @@ Jexia is a platform to develop your data driven applications. With Jexia you can
 
 Listed below, you will find in short what you can do with Jexia:
 
-Create a project
-Create datasets
-Add fields to your datasets
-Perform CRUD operations on your datasets
-Make relations between datasets
-Use Authentication mechanism
-Use SDK to authenticate and communicate with your datasets
+* Create a project
+* Create datasets
+* Add fields to your datasets
+* Perform CRUD operations on your datasets
+* Make relations between datasets
+* Use Authentication mechanism
+* Use SDK to authenticate and communicate with your datasets
 
 [Get Started](get-started.md)
