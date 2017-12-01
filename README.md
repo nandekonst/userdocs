@@ -7,8 +7,7 @@ Listed below, you will find in short what you can do with Jexia:
 * Create a project
 * Create datasets
 * Add fields to your datasets
-* [REST API's](rest-api-documentation.md)
-  * [Fetch Records](rest-api-documentation.md#fetching-resources)
+* [REST API's](rest-api)
 * Make relations between datasets
 * Use real-time communication
 * Use Authentication mechanism
