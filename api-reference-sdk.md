@@ -13,3 +13,15 @@
 * `RTCModule`
 * `SelectQuery`
 * `UpdateQuery`
+
+## Interfaces
+* `IExecutable`
+* `IFieldFilter`
+* `IFields`
+* `IFilterable`
+* `IFilteringCriterion`
+* `ILimit`
+* `IOffset`
+* `IRelational`
+* `IResource`
+* `ISortable`
