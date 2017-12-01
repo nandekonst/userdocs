@@ -9,7 +9,7 @@ The SDK currently exposes the following features:
 * Authentication and authorization is handled automatically by the SDK, the user only needs to provide credentials once at SDK initialization.
 * [Support for server side Javascript (nodejs)](use-the-javascript-sdk-serverside.md)
 * [Support for browser side Javascript](use-the-javascript-sdk-in-the-browser.md) 
-* API Reference
+* [API Reference](sdk-api-reference.md)
 
 ## On-demand data access
 
