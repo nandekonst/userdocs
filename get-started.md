@@ -8,7 +8,7 @@
 
 # Make relations
 
-# Interact with your data
+# Interact with your data 
 
 You can wire up the connection between your application and your datasets and start consuming data using the Javascript SDK.
 
