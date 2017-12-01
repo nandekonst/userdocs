@@ -11,3 +11,6 @@ Perform CRUD operations on your datasets
 Make relations between datasets
 Use Authentication mechanism
 Use SDK to authenticate and communicate with your datasets
+
+[Get Started]()
+[a relative link](get_started.md)
