@@ -28,7 +28,8 @@
 | **Public init** |
 | :--- |
 | `init(opts: IAuthOptions, ...modules: IModule[])` |
-| **Parameters :**NameTypeOptionalDescriptionopts`IAuthOptions`modules`IModule[]`**Returns :**`Promise<>` |
+| **Parameters :
+|**NameTypeOptionalDescriptionopts|`IAuthOptions`modules`IModule[]`|**Returns :**`Promise<>`| |
 
 | **Public terminate** |
 | :--- |
