@@ -2,14 +2,19 @@
 
 You can wire up the connection between your application and your datasets and start consuming data using the Javascript SDK.
 
+The SDK is available for:
+* [server side Javascript (nodejs)](use-the-javascript-sdk-serverside.md)
+* [browser side Javascript](use-the-javascript-sdk-in-the-browser.md) 
+
 The SDK currently exposes the following features:
 
-* on-demand access to data stored in datasets \(creating, reading, updating, deleting records\)
+* on-demand access to data stored in datasets (creating, reading, updating, deleting records\)
 * real-time notifications for subscribed events
 * Authentication and authorization is handled automatically by the SDK, the user only needs to provide credentials once at SDK initialization.
-* [Support for server side Javascript (nodejs)](use-the-javascript-sdk-serverside.md)
-* [Support for browser side Javascript](use-the-javascript-sdk-in-the-browser.md) 
-* [API Reference](api-reference-sdk.md)
+
+
+For developers:
+[API Reference](api-reference-sdk.md)
 
 ## On-demand data access
 
