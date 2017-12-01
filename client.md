@@ -19,10 +19,11 @@
 | :--- |
 | **Parameters :**NameTypeOptionalDescriptionfetch[`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) |
 
-| Name        | Type           | Optional  | Descr |
+| Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| fetch      |[`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) | |
-
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 ### Methods {#methods}
 
