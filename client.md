@@ -9,7 +9,7 @@
 
 | **Properties** |
 | :--- |
-| Public [tokenManager](#inputs) |
+| Public [tokenManager](###properties) |
 | **Methods** |
 | Public [init](#init) Public [terminate](#terminate) |
 
