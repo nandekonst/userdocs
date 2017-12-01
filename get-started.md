@@ -1,12 +1,12 @@
 # Get started
 
-# Create a project in the Jexia Console
+## Create a project in the Jexia Console
 
-# Create datasets
+## Create datasets
 
-# Add fields
+## Add fields
 
-# Make relations
+## Make relations
 
-# Interact with your data 
+## Interact with your data 
 
