@@ -17,13 +17,13 @@
 
 | `constructor(fetch:`[`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)`)` |
 | :--- |
-| **Parameters :**NameTypeOptionalDescriptionfetch[`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) |
-
-| Tables        | Are           | Cool  |
+| | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| zebra stripes | are neat      |    $1 | |
+
+
 
 ### Methods {#methods}
 
