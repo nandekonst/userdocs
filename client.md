@@ -19,6 +19,11 @@
 | :--- |
 | **Parameters :**NameTypeOptionalDescriptionfetch[`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) |
 
+| Name        | Type           | Optional  | Descr |
+| ------------- |:-------------:| -----:|
+| fetch      |[`Function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) | |
+
+
 ### Methods {#methods}
 
 | **Public init** |
