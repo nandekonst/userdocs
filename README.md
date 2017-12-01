@@ -4,7 +4,7 @@ Jexia is a platform to develop your data driven applications. With Jexia you can
 
 Listed below, you will find in short what you can do with Jexia:
 
-* Getting started
+* [Getting started](get-started.md)
 * [Use your REST API's](rest-api-documentation.md)
 * Use real-time communication
 * Use Authentication mechanism
