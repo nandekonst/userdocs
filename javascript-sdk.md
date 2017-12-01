@@ -7,8 +7,8 @@ The SDK currently exposes the following features:
 * on-demand access to data stored in datasets \(creating, reading, updating, deleting records\)
 * real-time notifications for subscribed events
 * Authentication and authorization is handled automatically by the SDK, the user only needs to provide credentials once at SDK initialization.
-* Support for server side Javascript (nodejs)
-* Support for browser side Javascript 
+* [Support for server side Javascript (nodejs)](use-the-javascript-sdk-serverside.md)
+* [Support for browser side Javascript](use-the-javascript-sdk-in-the-browser.md) 
 
 ## On-demand data access
 
