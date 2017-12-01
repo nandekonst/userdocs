@@ -2,7 +2,7 @@
 # SDK API Reference
 
 ## Classes
-* `Client`
+* [`Client`](client.md)
 * `DataOperationsModule`
 * `DataRequest`
 * `Dataset`
