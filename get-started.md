@@ -1,4 +1,6 @@
-# Get started
+# Getting started
+
+ 
 
 ## Create a project in the Jexia Console
 
