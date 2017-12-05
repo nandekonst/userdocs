@@ -1,12 +1,12 @@
-#REST 
+# REST 
 * Dataset
 * Fileset
 * Authentication
 * Relations
 
-#SDK API
+# SDK API
 
-#SDK
+# SDK
 * Dataset
 * Methods
 * Dev Guide
