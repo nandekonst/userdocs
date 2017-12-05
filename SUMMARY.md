@@ -8,7 +8,7 @@
   * [SDK](get-started.md#your-first-app)
   * REST API
   
-* Interfaces
+* [Interfaces](interfaces.md)
   * REST
   * SDK API
   * SDK
