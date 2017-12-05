@@ -2,7 +2,7 @@
 
 * [What is Jexia](what-is-jexia.md)
 
-* Getting started
+* [Getting started](get-started.md)
   * Create a project
   * Create dataset
   * SDK
