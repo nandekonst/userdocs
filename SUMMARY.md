@@ -4,8 +4,8 @@
 
 * [Getting started](get-started.md)
   * [Create a project](get-started.md#create-a-project-in-the-jexia-console)
-  * Create dataset
-  * SDK
+  * [Create dataset](get-started.md#create-datasets)
+  * [SDK](get-started.md#)
   * REST API
   
 * Interfaces
