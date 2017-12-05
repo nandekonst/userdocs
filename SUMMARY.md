@@ -1,6 +1,5 @@
 # Summary
 
-* 
 * [What is Jexia](what-is-jexia.md)
 
 * Getting started
