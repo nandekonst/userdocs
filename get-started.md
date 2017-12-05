@@ -8,8 +8,8 @@
 (hello world example with SDK)
 
 ## REST API
-  curl (POST, GET, PUT, DEL)
-  postman (POST, GET, PUT, DEL)
+  * curl (POST, GET, PUT, DEL)
+  * postman (POST, GET, PUT, DEL)
   
 
 
