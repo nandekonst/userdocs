@@ -28,7 +28,10 @@ In order to create a field, click the "Add field" button. Name your field and se
 
 
 ## Copy URL
-You can operate on your data using the API URL:
+You can make CRUD operations on your data using the API URL:
+
+![copy_url](/copy_url.png "Copy URL")
+
 
 
 ## Javascript SDK
