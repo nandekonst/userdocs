@@ -19,6 +19,11 @@ Name your dataset. The name of the dataset is used as endpoint to allow you to c
 
 ![name_dataset](/create-dataset2.png "Name Dataset")
 
+## Add fields to your dataset or store your data schemaless
+The next step is to add fields to your datasets. However, it is also possible to store your data schemaless. In that case it is not necessary to create fields.
+
+In order to create a field, click the "Add field" button. Name your field and set its datatype. Data can be of type: `String`, `Integer`, `Float`, `Date`, `Datetime`, `Boolean` or `JSON`:
+
 
 
 ## Your first App
