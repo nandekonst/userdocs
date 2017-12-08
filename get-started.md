@@ -49,7 +49,7 @@ Install the Javascript SDK through npm by using:
 
 
 ### Server-side:
-include the SDK in your project:
+include the SDK in your node.js application:
 
 `const jexiaSDK = require('jexia-sdk-js/node');`
 
@@ -89,14 +89,67 @@ The user can execute the following operations on records:
 * update `[PATCH]`
 * delete `[DELETE]`
 
-Executing an operation on a set of records is done through a Query. Depending on their type, Queries give the user access to some (or all) of the following options:
+##### Populate the dataset: `[INSERT]`
 
-filtering (only records satisfying a certain condition will be retrieved/affected)
-sorting (the records will be sorted by a rule and direction before the action is executed)
-limiting/offsetting (only a certain number of records, starting from a certain position in the Dataset will be affected)
-selecting the fields to be retrieved (when the user does not want the entire record to be retrieved, only certain columns)
-relations (records from related datasets, as instructed, will also be affected by the request)
-All these features are handled server-side.
+```
+const jexiaClient = jexiaSDK.jexiaClient;
+const dataOperations = jexiaSDK.dataOperations;
+
+//Initialize DataOperationsModule
+let dataModule = dataOperations();
+
+//Initialize Client and pass DataOperationsModule to it.
+let client = jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule);
+
+function insertRecord(jexiaClient){
+    jexiaClient.then( (initializedClient) => {
+        let postDataset = dataModule.dataset("posts");
+        postDataset.insert([{title: "Super awesome post", content:"super awesome content", author:"the author name"}]).execute().then( (records) => {
+            console.log("New Record" + records);
+            process.exit();
+        }).catch( (error) => {
+            // there was a problem retrieving the records
+            console.log(error);
+            process.exit();
+        });
+    });
+}
+
+insertRecord(client);
+
+```
+
+##### Fetch the records `[GET]`:
+
+```
+const jexiaClient = jexiaSDK.jexiaClient;
+const dataOperations = jexiaSDK.dataOperations;
+
+//Initialize DataOperationsModule
+let dataModule = dataOperations();
+
+//Initialize Client and pass DataOperationsModule to it.
+let client = jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule);
+
+//select Records
+function selectRecords(jexiaClient){
+    jexiaClient.then( (initializedClient) => {
+        let postDataset = dataModule.dataset("posts");
+        postDataset.select().execute().then( (records) => {
+            console.log(records);
+            process.exit();
+        }).catch( (error) => {
+            // there was a problem retrieving the records
+            console.log(error);
+            process.exit();
+        });
+    });
+}
+
+selectRecords(client);
+
+```
+
 
 
 
