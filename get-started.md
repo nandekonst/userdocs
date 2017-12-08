@@ -80,7 +80,23 @@ let client = jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<you
 
 ```
 
+#### Operate on datasets
 
+The user can execute the following operations on records:
+
+* create `[INSERT]`
+* read `[GET]`
+* update `[PATCH]`
+* delete `[DELETE]`
+
+Executing an operation on a set of records is done through a Query. Depending on their type, Queries give the user access to some (or all) of the following options:
+
+filtering (only records satisfying a certain condition will be retrieved/affected)
+sorting (the records will be sorted by a rule and direction before the action is executed)
+limiting/offsetting (only a certain number of records, starting from a certain position in the Dataset will be affected)
+selecting the fields to be retrieved (when the user does not want the entire record to be retrieved, only certain columns)
+relations (records from related datasets, as instructed, will also be affected by the request)
+All these features are handled server-side.
 
 
 
