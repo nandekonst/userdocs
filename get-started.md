@@ -6,11 +6,17 @@ After you created your account, login to the Jexia Dashboard to create your proj
 
 After login you can create a project by clicking the My Projects menu item.
 
-![create_project](/create-project.png "Description goes here")
+![create_project](/create-project.png "Create Project")
 
 
 ## Create datasets
 In order to interact and perform CRUD operations on your data, you need to store the data in a dataset. In order to do so, you need to create the dataset first. Click on your project. Now click the button "create new dataset":
+
+![create_dataset](/create-dataset.png "Create Dataset")
+
+Name your dataset. The name of the dataset is used as endpoint to allow you to communicate with the API.
+![name_dataset](/create-dataset2.png "Name Dataset")
+
 
 
 ## Your first App
