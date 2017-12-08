@@ -35,7 +35,12 @@ You can make CRUD operations on your data using the API URL:
 
 
 ## Javascript SDK
-With the Javascript SDK you can perform CRUD operations on your data within your application. The Javascript SDK can be used server-side and browser-side. 
+You can wire up the connection between your application and your datasets and start consuming data using the Javascript SDK. The Javascript SDK can be used server-side and browser-side. 
+The SDK currently exposes the following features:
+
+* on-demand access to data stored in datasets (creating, reading, updating, deleting records)
+* real-time notifications for subscribed events
+* Authentication and authorization is handled automatically by the SDK, the user only needs to provide credentials once at SDK initialization.
 
 ### Installation:
 Install the Javascript SDK through npm by using:
