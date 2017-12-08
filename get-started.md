@@ -150,6 +150,21 @@ selectRecords(client);
 
 ```
 
+##### Update the record `[PATCH]`
+
+```
+const jexiaClient = jexiaSDK.jexiaClient;
+const dataOperations = jexiaSDK.dataOperations;
+
+//Initialize DataOperationsModule
+let dataModule = dataOperations();
+
+//Initialize Client and pass DataOperationsModule to it.
+let client = jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule);
+
+
+
+```
 
 
 
