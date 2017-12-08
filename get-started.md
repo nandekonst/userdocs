@@ -48,8 +48,14 @@ Install the Javascript SDK through npm by using:
 `npm install jexia-sdk-js --save`
 
 
-
 ### Server-side:
+include the SDK in your project:
+
+`const jexiaSDK = require('jexia-sdk-js/node');`
+
+#### Initialization and Authentication
+The`jexiaClient()`function will return an instance of the`Client`class. On Node.JS, you will need to provide a`fetch`standard compliant function as a parameter. You will need to add a compatible dependency to your project. For development of the SDK we've used`node-fetch`
+
 
 
 ### Browser-side:
