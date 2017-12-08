@@ -24,6 +24,8 @@ The next step is to add fields to your datasets. However, it is also possible to
 
 In order to create a field, click the "Add field" button. Name your field and set its datatype. Data can be of type: `String`, `Integer`, `Float`, `Date`, `Datetime`, `Boolean` or `JSON`:
 
+## Copy URL
+You can operate on your data using the API URL:
 
 
 ## Javascript SDK
