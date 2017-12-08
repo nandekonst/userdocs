@@ -28,7 +28,7 @@ In order to create a field, click the "Add field" button. Name your field and se
 
 
 ## Copy URL
-You can make CRUD operations on your data using the API URL:
+You can make CRUD operations on your data using the API URL. FOperating on datasets using the SDK only requires your project ID and your user name and password
 
 ![copy_url](/copy_url.png "Copy URL")
 
