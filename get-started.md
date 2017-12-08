@@ -212,16 +212,14 @@ deleteRecord(client);
 ```
 
 
-
+[Complete SDK functionality](use-the-javascript-sdk-serverside.md)
 
 ### Browser-side:
 
 
 
 
-In this example we will populate our dataset and fetch the data afterwards using a simple node.js script. 
 
-For more detailed information about the functionality of the SDK please read ""
 
 (hello world example with SDK)
 
