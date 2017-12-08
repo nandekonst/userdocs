@@ -4,6 +4,9 @@ This guide helps you to set up your Jexia project and to start interact with you
 ## Create a project in the Jexia Dashboard
 After you created your account login to the Jexia Dashboard to create your project. Within a project you can create datasets, add fields to them, set up field validation and make relations between your datasets.
 
+![create_project](/create-project.png "Description goes here")
+
+
 
 ## Create datasets
 
