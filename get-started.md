@@ -162,9 +162,55 @@ let dataModule = dataOperations();
 //Initialize Client and pass DataOperationsModule to it.
 let client = jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule);
 
+function updateRecord(jexiaClient){
+    jexiaClient.then( (initializedClient) => {
+        let postDataset = dataModule.dataset("posts");
+        postDataset.update({title: "Super awesome post2"}).where(field("title").isEqualTo("Super awesome post")).execute().then( (records) => {
+            console.log("Record " + JSON.stringify(records)) ;
+            process.exit();
+        }).catch( (error) => {
+            // there was a problem retrieving the records
+            console.log(error);
+            process.exit();
+        });
+    });
+}
 
+updateRecord(client)
 
 ```
+
+##### Delete the record `[DELETE]`
+
+```
+const jexiaClient = jexiaSDK.jexiaClient;
+const dataOperations = jexiaSDK.dataOperations;
+
+//Initialize DataOperationsModule
+let dataModule = dataOperations();
+
+//Initialize Client and pass DataOperationsModule to it.
+let client = jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule);
+
+//delete records
+function deleteRecord(jexiaClient){
+    jexiaClient.then( (initializedClient) => {
+        let postDataset = dataModule.dataset("posts");
+        postDataset.delete().where(field("title").isEqualTo("Super awesome post2")).execute().then( (records) => {
+            console.log("Record " + JSON.stringify(records)) ;
+            process.exit();
+        }).catch( (error) => {
+            // there was a problem retrieving the records
+            console.log(error);
+            process.exit();
+        });
+    });
+}
+
+deleteRecord(client);
+
+```
+
 
 
 
