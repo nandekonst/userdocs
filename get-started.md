@@ -210,6 +210,7 @@ function deleteRecord(jexiaClient){
 deleteRecord(client);
 
 ```
+##### Real Time Events
 
 
 [Complete SDK functionality](use-the-javascript-sdk-serverside.md)
