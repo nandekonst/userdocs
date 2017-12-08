@@ -14,7 +14,9 @@ In order to interact and perform CRUD operations on your data, you need to store
 
 ![create_dataset](/create-dataset.png "Create Dataset")
 
+
 Name your dataset. The name of the dataset is used as endpoint to allow you to communicate with the API.
+
 ![name_dataset](/create-dataset2.png "Name Dataset")
 
 
