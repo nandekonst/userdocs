@@ -31,6 +31,7 @@ With the Javascript SDK you can perform CRUD operations on your data within your
 
 ### Installation:
 Install the Javascript SDK through npm by using:
+
 `npm install jexia-sdk-js --save`
 
 
