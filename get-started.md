@@ -54,7 +54,33 @@ include the SDK in your project:
 `const jexiaSDK = require('jexia-sdk-js/node');`
 
 #### Initialization and Authentication
-The`jexiaClient()`function will return an instance of the`Client`class. On Node.JS, you will need to provide a`fetch`standard compliant function as a parameter. You will need to add a compatible dependency to your project. For development of the SDK we've used`node-fetch`
+The`jexiaClient()`function will return an instance of the`Client`class. On Node.JS, you will need to provide a`fetch`standard compliant function as a parameter. You will need to add a compatible dependency to your project. For development of the SDK we've used`node-fetch`.
+
+`const fetch = require("node-fetch");`
+
+In order to authenticate and operate on our datasets we need initialize a `Jexia CLient` and a `DataOperationsModule`.
+The Jexia SDK is built as a set of modules \(or plugins\) structured around a core entity \(the`Client`class used above\). In order to use a module you need to:
+
+* initialize it
+* pass it to the
+  `Client`
+  when calling the
+  `.init()`
+  method
+
+```
+const jexiaClient = jexiaSDK.jexiaClient;
+const dataOperations = jexiaSDK.dataOperations;
+
+//Initialize DataOperationsModule
+let dataModule = dataOperations();
+
+//Initialize Client and pass DataOperationsModule to it.
+let client = jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule);
+
+```
+
+
 
 
 
