@@ -29,7 +29,7 @@ In order to create a field, click the "Add field" button. Name your field and se
 ## Javascript SDK
 With the Javascript SDK you can perform CRUD operations on your data within your application. The Javascript SDK can be used server-side and browser-side. 
 
-## Installation
+### Installation
 
 ### Server-side:
 
