@@ -227,7 +227,15 @@ The real-time functionality is added through a separate module. The module needs
 const realTime = jexiaSDK.realTime;
 
 ```
-The real-time module needs a websocket client in order to function. For Node.JS apps, a websocket client needs to be imported and a callback instantiating the websocket client must be passed to the real-time module, as in this example.
+The real-time module needs a websocket client in order to function. 
+
+```
+const ws = require('ws');
+
+```
+
+
+For Node.JS apps, a websocket client needs to be imported and a callback instantiating the websocket client must be passed to the real-time module, as in this example.
 
 ```
 const jexiaSDK = require('jexia-sdk-js/node');
