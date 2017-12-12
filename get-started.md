@@ -304,26 +304,25 @@ let rtc = realTime((messageObject) => {
       return new ws(url, {origin: "http://localhost"});
   });
 
-//Initialize Client and pass DataOperationsModule and RTC module to it.
-let client = sdk.jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-user-name>", secret: "<your-password>"}, dataModule, rtc);
+let jexiaClientInstance = jexiaClient(fetch);
 
-function ListenRealTime(jexiaClient){
-    jexiaClient.then( () => {
-        return rtc.subscribe('insert', dataModule.dataset('posts')).then( () => {
-            console.log('Succesfully subscribed to dataset changes');
-            return dataModule.dataset('posts').insert([{title: 'the title of the post',content:'The content of the post', author:'the author of the post'}]).execute();
-        }).then( (records ) => {
-            console.log('HTTP response to request query received, shutting down in 5, 4, 3...');
-            setTimeout( () => {
-                jexiaClient.terminate().then( () => process.exit() );
-            }, 5000);
-        })
-    }).catch( (err) => {
-        console.log(err.message);
-        jexiaClient.terminate().then( () => process.exit() );
-    })
+jexiaClientInstance.init({projectID: "<your-project-id>", key: "<your-user-name>", secret: "<your-password>"}, dataModule, rtc).then( () => {
+  return rtc.subscribe("insert", dataModule.dataset("posts")).then( () => {
+    console.log("Succesfully subscribed to dataset changes");
+    return dataModule.dataset("posts").insert([{content: "aNewKeyword"}, {title: "anotherKeyword"}]).execute();
+  }).then( (records) => {
+    console.log("HTTP response to request query received, shutting down in 5, 4, 3...");
+    setTimeout( () => {
+      jexiaClientInstance.terminate().then( () => process.exit() );
+    }, 5000);
+  });
+}).catch( (err) => {
+  console.log(err.message);
+  jexiaClientInstance.terminate().then( () => process.exit() );
+});
 
-}
+
+
 
 ```
 
