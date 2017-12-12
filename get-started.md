@@ -69,6 +69,8 @@ The Jexia SDK is built as a set of modules \(or plugins\) structured around a co
   method
 
 ```
+const jexiaSDK = require('jexia-sdk-js/node');
+const fetch = require('node-fetch');
 const jexiaClient = jexiaSDK.jexiaClient;
 const dataOperations = jexiaSDK.dataOperations;
 
@@ -92,6 +94,8 @@ The user can execute the following operations on records:
 ##### Populate the dataset: `[INSERT]`
 
 ```
+const jexiaSDK = require('jexia-sdk-js/node');
+const fetch = require('node-fetch');
 const jexiaClient = jexiaSDK.jexiaClient;
 const dataOperations = jexiaSDK.dataOperations;
 
@@ -122,6 +126,8 @@ insertRecord(client);
 ##### Fetch the records `[GET]`:
 
 ```
+const jexiaSDK = require('jexia-sdk-js/node');
+const fetch = require('node-fetch');
 const jexiaClient = jexiaSDK.jexiaClient;
 const dataOperations = jexiaSDK.dataOperations;
 
@@ -153,6 +159,8 @@ selectRecords(client);
 ##### Update the record `[PATCH]`
 
 ```
+const jexiaSDK = require('jexia-sdk-js/node');
+const fetch = require('node-fetch');
 const jexiaClient = jexiaSDK.jexiaClient;
 const dataOperations = jexiaSDK.dataOperations;
 
@@ -183,6 +191,8 @@ updateRecord(client)
 ##### Delete the record `[DELETE]`
 
 ```
+const jexiaSDK = require('jexia-sdk-js/node');
+const fetch = require('node-fetch');
 const jexiaClient = jexiaSDK.jexiaClient;
 const dataOperations = jexiaSDK.dataOperations;
 
@@ -211,6 +221,31 @@ deleteRecord(client);
 
 ```
 ##### Real Time Events
+The real-time functionality is added through a separate module. The module needs to be imported, instantiated and initialized along with the client.
+
+```
+const realTime = jexiaSDK.realTime;
+
+```
+The real-time module needs a websocket client in order to function. For Node.JS apps, a websocket client needs to be imported and a callback instantiating the websocket client must be passed to the real-time module, as in this example.
+
+```
+const jexiaSDK = require('jexia-sdk-js/node');
+const fetch = require('node-fetch');
+const jexiaClient = jexiaSDK.jexiaClient;
+const dataOperations = jexiaSDK.dataOperations;
+
+const ws = require('ws');
+const realTime = jexiaSDK.realTime;
+
+let rtc = realTime((messageObject) => {
+  console.log("Realtime message received:");
+  console.log(messageObject);
+}, (url) => {
+    return new ws(url, {origin: "http://localhost"});
+});
+
+```
 
 
 [Complete SDK functionality](use-the-javascript-sdk-serverside.md)
