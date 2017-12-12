@@ -284,7 +284,50 @@ The Client class exposes a method called `.terminate()` which returns a `Promise
 
 ```
 
+### Full RTC Example
 
+```
+let sdk = require('jexia-sdk-js/node');
+let fetch = require('node-fetch');
+const realTime = sdk.realTime;
+
+
+const ws = require('ws');
+
+
+//Initialize DataOperationsModule
+let dataModule = sdk.dataOperations();
+
+//Initialize RTC Module
+let rtc = realTime((messageObject) => {
+    console.log("Realtime message received:");
+    console.log(messageObject);
+  }, (url) => {
+      return new ws(url, {origin: "http://localhost"});
+  });
+
+//Initialize Client and pass DataOperationsModule and RTC module to it.
+let client = sdk.jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-user-name>", secret: "<your-password>"}, dataModule, rtc);
+
+function ListenRealTime(jexiaClient){
+    jexiaClient.then( () => {
+        return rtc.subscribe('insert', dataModule.dataset('posts')).then( () => {
+            console.log('Succesfully subscribed to dataset changes');
+            return dataModule.dataset('posts').insert([{title: 'the title of the post',content:'The content of the post', author:'the author of the post'}]).execute();
+        }).then( (records ) => {
+            console.log('HTTP response to request query received, shutting down in 5, 4, 3...');
+            setTimeout( () => {
+                jexiaClient.terminate().then( () => process.exit() );
+            }, 5000);
+        })
+    }).catch( (err) => {
+        console.log(err.message);
+        jexiaClient.terminate().then( () => process.exit() );
+    })
+
+}
+
+```
 
 
 [Complete SDK functionality](use-the-javascript-sdk-serverside.md)
