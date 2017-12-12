@@ -327,9 +327,10 @@ jexiaClientInstance.init({projectID: "<your-project-id>", key: "<your-user-name>
 ```
 
 
-[Complete SDK functionality](use-the-javascript-sdk-serverside.md)
+[Complete SDK functionality for serverside use](use-the-javascript-sdk-serverside.md)
 
 ### Browser-side:
+
 
 
 
