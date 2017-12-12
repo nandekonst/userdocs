@@ -290,8 +290,6 @@ The Client class exposes a method called `.terminate()` which returns a `Promise
 let sdk = require('jexia-sdk-js/node');
 let fetch = require('node-fetch');
 const realTime = sdk.realTime;
-
-
 const ws = require('ws');
 
 
