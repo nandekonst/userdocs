@@ -220,7 +220,7 @@ function deleteRecord(jexiaClient){
 deleteRecord(client);
 
 ```
-##### Real Time Events
+##### Listen to Real Time Events
 The real-time functionality is added through a separate module. The module needs to be imported, instantiated and initialized along with the client.
 
 ```
@@ -233,7 +233,6 @@ The real-time module needs a websocket client in order to function.
 const ws = require('ws');
 
 ```
-
 
 For Node.JS apps, a websocket client needs to be imported and a callback instantiating the websocket client must be passed to the real-time module, as in this example.
 
@@ -254,6 +253,38 @@ let rtc = realTime((messageObject) => {
 });
 
 ```
+The real-time module needs to be passed to the Client when initializing the latter. The Client accepts a spread parameter to define the modules that need to be initialized.
+
+```
+[..]
+//Initialize Client and pass DataOperationsModule and RTC module to it.
+let client = sdk.jexiaClient(fetch).init({projectID: "<your-project-id>", key: "<your-user-name>", secret: "<your-password>"}, dataModule, rtc);
+[..]
+
+```
+After a succesful module initialization, the user can start subscribing to events. When a real-time message is pushed from the server, the callback defined when instantiating the real-time module will be called.
+
+```
+[..]
+
+rtc.subscribe('insert', dataModule.dataset('posts')
+
+[..]
+
+```
+
+The Client class exposes a method called .terminate() which returns a Promise with the terminated Client instance. Use this to clear up resources used by the Client class and any modules you initialized along with it (you don't have to pass the modules along, the Client will terminate any modules you supplied on initialization.)
+
+```
+ jexiaClient.terminate().then( (terminatedClient) => {
+   // everything has been cleared
+ }).catch( (err) => {
+   // something went wrong when cleaning up
+ })
+
+```
+
+
 
 
 [Complete SDK functionality](use-the-javascript-sdk-serverside.md)
