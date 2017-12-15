@@ -374,8 +374,26 @@ Example:
 </html>
 
 ```
+#### Operate on datasets
 
+The user can execute the following operations on records:
 
+* create `[INSERT]`
+* read `[GET]`
+* update `[PATCH]`
+* delete `[DELETE]`
+
+##### Populate the dataset: `[INSERT]`
+
+##### Fetch the records `[GET]`:
+
+##### Update the record `[PATCH]`
+
+##### Delete the record `[DELETE]`
+
+##### Listen to Real Time Events
+
+### Full RTC Example
 
 
 ## REST API
