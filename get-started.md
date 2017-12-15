@@ -380,6 +380,27 @@ The user can execute the following operations on records:
 
 ##### Populate the dataset: `[INSERT]`
 
+```
+ <script type="text/javascript">
+                 document.getElementById("authorize").onclick = function(){
+                     //Initialize dataOperationsModule
+                     let dataModule = jexia.dataOperations();
+                     let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-user-name>", secret: "your-password"}, dataModule).then((initializedClient) => {
+                         dataModule.dataset("posts").insert([{title:'The title', content: 'the      content'}]).execute().then((records) => {
+                             let data = records;
+                             for(let i=0; i < data.length; i++){
+                                 document.write("<ul><li>" + data[i].title + "</li></ul>") 
+                             }
+                             console.log(JSON.stringify(data))
+                         }).catch((error) => {      
+                             console.log(error)
+                         })
+                     })
+                 }
+            </script>
+
+```
+
 ##### Fetch the records `[GET]`:
 
 ##### Update the record `[PATCH]`
