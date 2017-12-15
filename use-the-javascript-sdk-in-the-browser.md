@@ -70,7 +70,7 @@ Using an initialized`DataOperationsModule`object, you can instantiate`Dataset`ob
 
 ```
 [..]
-let posts = dom.dataset("posts");
+let posts = dataModule.dataset("posts");
 [..]
 ```
 
