@@ -467,7 +467,64 @@ The user can execute the following operations on records:
 
 ##### Listen to Real Time Events
 
+
+
+```
+<script type="text/javascript">
+                 document.getElementById("authorize").onclick = function(){
+                     //Initialize dataOperationsModule
+                     let dataModule = jexia.dataOperations();
+                     let rtc = jexia.realTime((messageObject) => {
+                         console.log(messageObject)
+                     }, (url) => {
+                         return new WebSocket(url)
+                     });
+ </script>
+
+
+```
+
+The real-time functionality is added through a separate module. The module needs to be imported, instantiated and initialized along with the client.
+
+In the browser the real-time module uses the native `[WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)` object of the browser
+
+The real-time module needs a websocket client in order to function. 
+
+
+
 ### Full RTC Example
+The real-time functionality is added through a separate module. The module needs to be imported, instantiated and initialized along with the client.
+
+```
+ <script type="text/javascript">
+                 document.getElementById("authorize").onclick = function(){
+                     //Initialize dataOperationsModule
+                     let dataModule = jexia.dataOperations();
+                     
+                     //Initialize rtc
+                     let rtc = jexia.realTime((messageObject) => {
+                         console.log(messageObject)
+                     }, (url) => {
+                         return new WebSocket(url)
+                     });
+                     
+                     
+ let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key:   "<your-user-name>", secret: "<your-password>"},rtc, dataModule).then((initializedClient) => {
+                        console.log(initializedClient);
+                        const posts = dataModule.dataset('posts');
+                        rtc.subscribe('post', posts);
+                        setTimeout(() => {
+                            posts.insert([{title: "My realtime post", content: "Content of my realtime post"}]).execute().then( (records) =>{
+                                console.log("Inserted records" + JSON.stringify(records))
+                            }).catch((error) => {
+                                console.log(error)
+                            });
+                        }, 1000)   
+                     });
+                 }
+            </script>
+
+```
 
 
 ## REST API
