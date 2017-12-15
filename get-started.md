@@ -486,7 +486,7 @@ The user can execute the following operations on records:
 
 The real-time functionality is added through a separate module. The module needs to be imported, instantiated and initialized along with the client.
 
-In the browser the real-time module uses the native `[WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)` object of the browser
+In the browser the real-time module uses the native [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket) object of the browser
 
 The real-time module needs a websocket client in order to function. 
 
