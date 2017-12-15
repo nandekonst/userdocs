@@ -359,14 +359,10 @@ Example:
                      //Initialize dataOperationsModule
                      let dataModule = jexia.dataOperations();
                      let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password>"}, dataModule).then((initializedClient) => {
-                         dataModule.dataset("posts").select().execute().then((records) => {
+                      
                              // you have been succesfully logged in!
                             // you can start using the initializedClient variable here
-                         }).catch((error) => {      
-                             console.log(error)
-                         })
-                     })
-                 }
+                    }
             </script>
     </body>
 </html>
