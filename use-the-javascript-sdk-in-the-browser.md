@@ -52,8 +52,8 @@ Example:
            <script type="text/javascript">
                 document.getElementById("authorize").onclick = function(){
                     //Initialize dataOperationsModule
-                    let dom = jexia.dataOperations();
-                    let jexiaClient = jexia.jexiaClient().init({appUrl: "localhost", key: "anna@example.com", secret: "annie123"}, dom).then((initializedClient) => {
+                    let dataModule = jexia.dataOperations();
+                    let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule).then((initializedClient) => {
 
                         // you have been succesfully logged in!
                         // you can start using the initializedClient variable here
@@ -67,6 +67,7 @@ Example:
            </script>
         </body>
 </html>
+
 ```
 
 ## Dataset objects and Query objects
@@ -108,9 +109,9 @@ Lets select all records of a dataset. If you watch closely, you will notice that
            <script type="text/javascript">
                 document.getElementById("authorize").onclick = function(){
                     //Initialize dataOperationsModule
-                    let dom = jexia.dataOperations();
-                    let jexiaClient = jexia.jexiaClient().init({appUrl: "localhost", key: "anna@example.com", secret: "annie123"}, dom).then((initializedClient) => {
-                        dom.dataset("posts").select().execute().then((records) => {
+                    let dataModule = jexia.dataOperations();
+                    let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule).then((initializedClient) => {
+                        dataModule.dataset("posts").select().execute().then((records) => {
                                 //do something with your data
                             }
                             console.log(JSON.stringify(data))
@@ -136,10 +137,10 @@ We can also use temporary variables to point out the different objects and funct
            <script type="text/javascript">
                 document.getElementById("authorize").onclick = function(){
                     //Initialize dataOperationsModule
-                    let dom = jexia.dataOperations();
-                    let jexiaClient = jexia.jexiaClient().init({appUrl: "localhost", key: "anna@example.com", secret: "annie123"}, dom).then((initializedClient) => {
-                        let posts = dom.dataset("posts")
-                        let unexecutedQuery = dom.select();
+                    let dataModule = jexia.dataOperations();
+                    let jexiaClient = jexia.jexiaClient().init({appUrl: "localhost", key: "anna@example.com", secret: "annie123"}, dataModule).then((initializedClient) => {
+                        let posts = dataModule.dataset("posts")
+                        let unexecutedQuery = posts.select();
                         let executedQueryPromise = unexecutedQuery.execute();
                            executedQueryPromise.then((records) => {
                                 //do something with your data
