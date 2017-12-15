@@ -43,30 +43,24 @@ Probably the most useful module is the Data Operation Module \(`DataOperationsMo
 Example:
 
 ```
-<html>
-    <head>
-        <script src="path/to/jexia-sdk-js/dist/browser-jexia-sdk.min.js
-    </head>
-       <body>
-           <a href="#" id="authorize">Authorize</a>
-           <script type="text/javascript">
-                document.getElementById("authorize").onclick = function(){
-                    //Initialize dataOperationsModule
-                    let dataModule = jexia.dataOperations();
-                    let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule).then((initializedClient) => {
+<script type="text/javascript">
+                 document.getElementById("authorize").onclick = function(){
+                     //Initialize dataOperationsModule
+                     let dataModule = jexia.dataOperations();
+                     let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-usernam>", secret: "<your-password"}, dataModule).then((initializedClient) => {
+                         dataModule.dataset("posts").select().execute().then((records) => {
+                             let data = records;
+                             for(let i=0; i < data.length; i++){
+                                 document.write("<ul><li>" + data[i].title + "</li></ul>") 
+                             }
+                             console.log(JSON.stringify(data))
+                         }).catch((error) => {      
+                             console.log(error)
+                         })
+                     })
+                 }
+            </script>
 
-                        // you have been succesfully logged in!
-                        // you can start using the initializedClient variable here
-
-                            }
-                        }).catch((error) => {      
-                            console.log(error)
-                        })
-                    })
-                }
-           </script>
-        </body>
-</html>
 
 ```
 
