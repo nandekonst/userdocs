@@ -331,13 +331,52 @@ jexiaClientInstance.init({projectID: "<your-project-id>", key: "<your-user-name>
 
 ### Browser-side:
 
+In order to use the SDK in your browser application the SDK in the <head> section of your html page. In order to get access to the methods of the SDK you need to use the namespace `jexia` when calling a method.
+  
+  `<script src="path/to/jexia-sdk-js/dist/browser-jexia-sdk.min.js></script>`
+  
+The `jexiaClient()` function will return an instance of the `Client` class. The browser SDK will use the native `fetch` implementation.
+
+#### Initialization and Authentication
+
+The Jexia SDK is built as a set of modules (or plugins) structured around a core entity, (the `Client` class used above). In order to use a module, you need to :
+
+* initialize it
+* pass it to the `Client` when calling the `.init()` method
+Probably the most useful module is the Data Operation Module (`DataOperationsModule` class). The example below will show how to initialize the SDK using this module. Follow the `dataModule` variable to see how this mechanism works.
+
+Example:
+
+```
+<html>
+    <head>
+        <script src="path/to/jexia-sdk-js/dist/browser-jexia-sdk.min.js
+    </head>
+       <body>
+           <a href="#" id="authorize">Authorize</a>
+           <script type="text/javascript">
+                document.getElementById("authorize").onclick = function(){
+                    //Initialize dataOperationsModule
+                    let dataModule = jexia.dataOperations();
+                    let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule).then((initializedClient) => {
+
+                        // you have been succesfully logged in!
+                        // you can start using the initializedClient variable here
+
+                            }
+                        }).catch((error) => {      
+                            console.log(error)
+                        })
+                    })
+                }
+           </script>
+        </body>
+</html>
+
+```
 
 
 
-
-
-
-(hello world example with SDK)
 
 ## REST API
   * curl (POST, GET, PUT, DEL)
