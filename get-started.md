@@ -433,10 +433,8 @@ The user can execute the following operations on records:
                      let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password>"}, dataModule).then((initializedClient) => {
                          dataModule.dataset("posts").update({title: "aNewKeyword2"}).where(field("title").isEqualTo("aNewKeyword")).execute().then((records) => {
                              let data = records;
-                             for(let i=0; i < data.length; i++){
-                                 document.write("<ul><li>" + data[i].title + "</li></ul>") 
-                             }
-                             console.log(JSON.stringify(data))
+                            
+                             console.log("Updated record" + JSON.stringify(data))
                          }).catch((error) => {      
                              console.log(error)
                          })
@@ -447,6 +445,25 @@ The user can execute the following operations on records:
 ```
 
 ##### Delete the record `[DELETE]`
+
+```
+    <script type="text/javascript">
+                 document.getElementById("authorize").onclick = function(){
+                     //Initialize dataOperationsModule
+                     let dataModule = jexia.dataOperations();
+                     let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password>"}, dataModule).then((initializedClient) => {
+      dataModule.dataset("posts").delete().where(field("title").isEqualTo("My post")).execute().then((records) => {
+                             let data = records;
+                            
+                             console.log("Deleted record" + JSON.stringify(data))
+                         }).catch((error) => {      
+                             console.log(error)
+                         })
+                     })
+                 }
+            </script>
+
+```
 
 ##### Listen to Real Time Events
 
