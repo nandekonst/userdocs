@@ -350,28 +350,32 @@ Example:
 ```
 <html>
     <head>
-        <script src="path/to/jexia-sdk-js/dist/browser-jexia-sdk.min.js
+            <script src="node_modules/jexia-sdk-js/browser.js"></script>
+            
+        
     </head>
-       <body>
-           <a href="#" id="authorize">Authorize</a>
-           <script type="text/javascript">
-                document.getElementById("authorize").onclick = function(){
-                    //Initialize dataOperationsModule
-                    let dataModule = jexia.dataOperations();
-                    let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password"}, dataModule).then((initializedClient) => {
+    <body>
+            <a href="#" id="authorize">Authorize</a>
+            <script type="text/javascript">
+                 document.getElementById("authorize").onclick = function(){
+                     //Initialize dataOperationsModule
+                     let dataModule = jexia.dataOperations();
+                     let jexiaClient = jexia.jexiaClient().init({projectID: "<your-project-id>", key: "<your-username>", secret: "<your-password>"}, dataModule).then((initializedClient) => {
+                         dataModule.dataset("posts").select().execute().then((records) => {
+                             // you have been succesfully logged in!
+                            // you can start using the initializedClient variable here
+                         }).catch((error) => {      
+                             console.log(error)
+                         })
+                     })
+                 }
+            </script>
 
-                        // you have been succesfully logged in!
-                        // you can start using the initializedClient variable here
+    </body>
 
-                            }
-                        }).catch((error) => {      
-                            console.log(error)
-                        })
-                    })
-                }
-           </script>
-        </body>
+
 </html>
+
 
 ```
 #### Operate on datasets
