@@ -350,9 +350,7 @@ Example:
 ```
 <html>
     <head>
-            <script src="node_modules/jexia-sdk-js/browser.js"></script>
-            
-        
+       <script src="node_modules/jexia-sdk-js/browser.js"></script>    
     </head>
     <body>
             <a href="#" id="authorize">Authorize</a>
@@ -370,10 +368,7 @@ Example:
                      })
                  }
             </script>
-
     </body>
-
-
 </html>
 
 
